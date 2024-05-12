@@ -13,8 +13,8 @@ const getAll = async (req, res) => {
 };
 
 const getById = async (req, res) => {
-  const { iventId } = req.params;
-  const result = await Event.findOne({ _id: iventId });
+  const { eventId } = req.params;
+  const result = await Event.findOne({ _id: eventId });
   if (!result) {
     throw HttpError(404);
   }
